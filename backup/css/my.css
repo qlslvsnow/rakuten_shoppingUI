@@ -1,0 +1,103 @@
+.up_slide {
+	width: 530px;
+	height: 530px;
+	float: left;
+	margin-right: 10px;
+}
+
+.vertical {
+	float: right;
+	width: 530px;
+	height: 530px;
+	margin-left: 50px;
+	z-index: -1;
+}
+
+.four_pics {
+	background-color: white;
+	z-index: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 6px;
+}
+
+#right_fixed1 {
+	float: right;
+	position: fixed;
+	top: 20px;
+	right: -400px;
+	width: 450px;
+	height: 150px;
+}
+
+#right_fixed2 {
+	float: right;
+	position: fixed;
+	top: 190px;
+	right: -400px;
+	width: 450px;
+	height: 150px;
+}
+
+#right_fixed3 {
+	float: right;
+	position: fixed;
+	top: 360px;
+	right: -400px;
+	width: 450px;
+	height: 150px;
+}
+
+#right_fixed4 {
+	float: right;
+	position: fixed;
+	top: 530px;
+	right: -400px;
+	width: 450px;
+	height: 150px;
+}
+
+#left_fixed1 {
+	float: left;
+	position: fixed;
+	top: 20px;
+	left: 0px;
+	width: 74px;
+	height: 74px;
+}
+
+#left_fixed2 {
+	float: left;
+	position: fixed;
+	top: 120px;
+	left: 0px;
+	width: 74px;
+	height: 74px;
+}
+
+#left_fixed3 {
+	float: left;
+	position: fixed;
+	top: 220px;
+	left: 0px;
+	width: 74px;
+	height: 74px;
+}
+
+#left_fixed4 {
+	float: left;
+	position: fixed;
+	top: 320px;
+	left: 0px;
+	width: 74px;
+	height: 74px;
+}
+
+#left_fixed5 {
+	float: left;
+	position: fixed;
+	top: 420px;
+	left: 0px;
+	width: 74px;
+	height: 74px;
+}

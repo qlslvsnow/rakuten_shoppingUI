@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rakuten</title>
+<style>
+body {
+	padding: 0 1em
+}
+h2 {
+	margin-bottom: 0
+}
+pre {
+	padding: 1em;
+	background-color: #ccc
+}
+</style>
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<link href="css/my.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-hover-dropdown.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/datepicker-ja.js"></script>
+<script src="js/gcalendar-holidays.js"></script>
+</head>
+<body onLoad="getCalendar()">
+<div class="container">
+
+
+<div class="page-header" style="margin-bottom:17px; margin-top:20px;">
+	<img src="./images/head/111111.jpg" /></div>
+ 
+  
+  </div>
+  
+  
+  
+  
+<div class="row fontOne" style="clear:both; margin-bottom:30px; margin-top:30px">
+  <div class="text-center col-md-15 col-sm-3">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">バッグ<b class="caret"></b> </button>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">ショルダーバッグ</a></li>
+        <li><a tabindex="-1" href="#">トートバッグ</a></li>
+        <li><a tabindex="-1" href="#">ハンドバッグ</a></li>
+        <li><a tabindex="-1" href="#">ビジネスバッグ</a></li>
+        <li><a tabindex="-1" href="#">リュック・デイパック</a></li>
+        <li><a tabindex="-1" href="#">ボストンバッグ</a></li>
+        <li><a tabindex="-1" href="#">かごバッグ</a></li>
+        <li><a tabindex="-1" href="#">パーティーバッグ</a></li>
+        <li><a tabindex="-1" href="#">ボディバッグ</a></li>
+        <li><a tabindex="-1" href="#">化粧ポーチ</a></li>
+        <li><a tabindex="-1" href="#">収納バッグ</a></li>
+        <li><a tabindex="-1" href="#">その他バッグ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center col-md-15 col-sm-3">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">財布<b class="caret"></b> </button>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">長財布</a></li>
+        <li><a tabindex="-1" href="#">折り財布</a></li>
+        <li><a tabindex="-1" href="#">小銭入れ</a></li>
+        <li><a tabindex="-1" href="#">がま口財布</a></li>
+        <li><a tabindex="-1" href="#">スマホ財布</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center col-md-15 col-sm-3">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">小物<b class="caret"></b> </button>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">カードケース</a></li>
+        <li><a tabindex="-1" href="#">キーケース</a></li>
+        <li><a tabindex="-1" href="#">きーホルダー</a></li>
+        <li><a tabindex="-1" href="#">名刺入れ</a></li>
+        <li><a tabindex="-1" href="#">通帳ケース</a></li>
+        <li><a tabindex="-1" href="#">パスポートケース</a></li>
+        <li><a tabindex="-1" href="#">ソックス·靴下</a></li>
+        <li><a tabindex="-1" href="#">帽子</a></li>
+        <li><a tabindex="-1" href="#">フェイスマスク</a></li>
+        <li><a tabindex="-1" href="#">手袋</a></li>
+        <li><a tabindex="-1" href="#">マフラー</a></li>
+        <li><a tabindex="-1" href="#">スカーフ·ストール</a></li>
+        <li><a tabindex="-1" href="#">ベルト</a></li>
+        <li><a tabindex="-1" href="#">インソール</a></li>
+        <li><a tabindex="-1" href="#">その他小物</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center col-md-15 col-sm-3">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">アパレル レディース<b class="caret"></b> </button>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">アウターウェア</a></li>
+        <li><a tabindex="-1" href="#">ブラウス</a></li>
+        <li><a tabindex="-1" href="#">カットソー</a></li>
+        <li><a tabindex="-1" href="#">キャミソール</a></li>
+        <li><a tabindex="-1" href="#">シャツ</a></li>
+        <li><a tabindex="-1" href="#">カーディガン</a></li>
+        <li><a tabindex="-1" href="#">ワンピース</a></li>
+        <li><a tabindex="-1" href="#">ベスト</a></li>
+        <li><a tabindex="-1" href="#">ボトムス</a></li>
+        <li><a tabindex="-1" href="#">レギンス·タイツ</a></li>
+        <li><a tabindex="-1" href="#">下着</a></li>
+        <li><a tabindex="-1" href="#">補正下着</a></li>
+        <li><a tabindex="-1" href="#">その他アパレル</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center col-md-15 col-sm-3">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">アパレル メンズ<b class="caret"></b> </button>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">アウターウェア</a></li>
+        <li><a tabindex="-1" href="#">カットソー</a></li>
+        <li><a tabindex="-1" href="#">カーディガン</a></li>
+        <li><a tabindex="-1" href="#">ボトムス</a></li>
+        <li><a tabindex="-1" href="#">ベスト</a></li>
+        <li><a tabindex="-1" href="#">下着</a></li>
+        <li><a tabindex="-1" href="#">補正下着</a></li>
+        <li><a tabindex="-1" href="#">その他アパレル</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div style="margin-left:0px; margin-bottom:10px" class="row"> <img src="images/广告页.jpg"> </div>
+<!-- content的左边部分 -->
+<div style="width:1050px">
+  <div style="width:310px; float:left;">
+    <div style="width:120px;float:left; font-size:10px; padding-top:2px;">
+      <a href=""><img src="images/vertical_pic/content_left1.jpg" /></a> <br>
+      <br>
+      <a href=""><img src="images/vertical_pic/content_left2.jpg" /></a> <br>
+      <br>
+      <a href=""><img src="images/vertical_pic/content_left3.jpg" /></a> </div>
+    <!-- content menu-->
+    <div style="width:190px;float:right;margin-right:-30px; margin-top:-17px;"> <img src=""images/contentMenu/left_tit03.jpg" border="0" alt="" style="margin-bottom:5px;">
+      <div style="background:#dbcbc0; padding:5px;" align="center">
+        <div> <img src="images/contentMenu/left_tit04.jpg" border="0" alt=""><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000222/" target="_top"><img src=		"images/contentMenu/left_cate01.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000215/" target="_top"><img src=
+                "images/contentMenu/left_cate02.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000217/" target="_top"><img src="images/contentMenu/left_cate03.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000216/" target="_top"><img src="images/contentMenu/left_cate04.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000245/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000257/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000221/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000219/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000172/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000258/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000259/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000218/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000233/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000261/" target="_top"><img src="images/contentMenu/left_cate05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000122/" target="_top"><img src="images/contentMenu/left_tit05.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000262/" target="_top"><img src="images/contentMenu/left_cate15.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000263/" target="_top"><img src="images/contentMenu/left_cate15.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000264/" target="_top"><img src="images/contentMenu/left_cate15.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000197/" target="_top"><img src="images/contentMenu/left_cate15.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000305/" target="_top"><img src="images/contentMenu/left_cate15.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000306/" target="_top"><img src="images/contentMenu/left_cate15.jpg" border="0" alt=""></a><br>
+          <img src=""images/contentMenu/left_tit06.jpg" border="0" alt=""><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000266/" target="_top"><img src="images/contentMenu/left_cate19.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000230/" target="_top"><img src="images/contentMenu/left_cate19.jpg" border="0" alt=""></a><br>
+          <a href="http://item.rakuten.co.jp/perenne/c/0000000239/" target="_top"><img src="images/contentMenu/left_cate19.jpg" border="0" alt=""></a><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- content的中间部分 -->
+  <div id="main" style="float:right; width:700px; margin-right:-0px"><img style="margin-left:0px; margin-top:-30px;" src="images/top_main.jpg" />
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg" class="content_table">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="1" background="http://image.rakuten.co.jp/perenne/cabinet/system/background_1.jpg">
+      <tbody>
+        <tr>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30164_m_140205.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30171n_05c.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/nanocolor01/30297_02.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/merumaga/30298_02_2m.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/system/topitem/10959.jpg"></a></td>
+          <td><a href="" target="_top"><img id="fuck" src="http://image.rakuten.co.jp/perenne/cabinet/30299-top.jpg"></a></td>
+        </tr>
+        <tr align="center">
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>14,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>13,000 <span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+          <td height="30" background="http://image.rakuten.co.jp/perenne/cabinet/system/price_b.jpg"><span class="style1"><span class="style3">￥</span>1,000<span class="style2">(+税)</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 四张图片 -->
+<table border="0" cellpadding="4px" style="margin-left:8px">
+  <caption style="font-size:26px; font-weight:bolder">
+  発売の新作商品
+  </caption>
+  <tbody>
+    <tr>
+      <td><img id="four1" src="images/slide/slide_first_small.jpg" /></td>
+      <td><img id="four2" src="images/slide/slide_first_small_2.jpg" /></td>
+      <td><img id="four3" src="images/slide/slide_first_small_3.jpg" /></td>
+      <td><img id="four4" src="images/slide/slide_first_small_4.jpg" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 右边固定元素 -->
+<div id="right_fixed1"> <a href=""><img src="images/right_fixed/right_fixed1.jpg" /></a> </div>
+<div id="right_fixed2"> <a href=""><img src="images/right_fixed/right_fixed2.jpg" /></a> </div>
+<div id="right_fixed3"> <a href=""><img src="images/right_fixed/right_fixed3.jpg" /></a> </div>
+
+<!-- 左边固定元素 -->
+<div id="left_fixed1"> <a href=""><img src="images/left_fixed/left1.png" /></a> </div>
+<div id="left_fixed2"> <a href=""><img src="images/left_fixed/left2.png" /></a> </div>
+<div id="left_fixed3"> <a href=""><img src="images/left_fixed/left3.png" /></a> </div>
+<div id="left_fixed4"> <a href=""><img src="images/left_fixed/left4.png" /></a> </div>
+<div id="left_fixed5"> <a href=""><img src="images/left_fixed/left5.png" /></a> </div>
+
+<!--foot s-->
+<footer class="panel-footer" style="text-align:center"> <img src="images/footerImg/foot-ttl.png">
+  <div id="company">
+    <div class="left">
+      <dl>
+        <dt><a href="html/guide/04_payment.html">お支払について</a></dt>
+        <dd>お支払いは　<a href="html/guide/04_payment.html#02">クレジットカード決済</a>・<a href="html/guide/04_payment.html#06">楽天Edy決済</a>・<a href="html/guide/04_payment.html#04">セブンイレブン決済</a>・<a href="html/guide/04_payment.html#05">ローソン決済・代金引換</a>・NP後払いよりお選びいただけます。<br>
+        </dd>
+        <dt><a href="html/guide/05_delivary.html">配送料について</a></dt>
+        <dd>【業者】佐川急便 </dd>
+        <dd>【送料】送料は、全国600円（税込）です。※沖縄県の場合は1,200円（税込）となります</dd>
+        <dd>【代引手数料】一律324円 </dd>
+        <dd>※１配送先につき、合計8,000円以上ご注文頂いた場合送料が0円になります。</dd>
+        <hr>
+        <dt><a href="html/guide/07_payback.html">交換・返品について</a></dt>
+        <dd>お客様都合によるサイズ交換や返品につきましては、当店の定める条件を満たす場合のみお受けしております。<br>
+          ご希望の方は必ず、注意点をご確認いただき、商品お受け取り後 １週間以内に当店までご連絡くださいませ。</dd>
+      </dl>
+    </div>
+    <div class="right">
+      <dl>
+        <dt><a href="html/guide/11_customer.html">お問い合せ</a></dt>
+        <dd>【楽天市場】株式会社ＣＩＢＥＬＥＳ</dd>
+        <dd>時間 / 10：00 ～ 18：00 （月～金） </dd>
+        <dd>休業日 / 土曜日 日曜日 ・祝日</dd>
+        <dd>冬季休業期間 / 12/27～1/4</dd>
+        <dd>住所：〒350-1145 埼玉県川越市 清水町16-1-201号</dd>
+        <dd>TEL：04-9293-9558</dd>
+        <dd>MAIL:cibeles@shop.rakuten.co.jp</dd>
+        <dd>&nbsp;</dd>
+        <dd>
+          <div id="datepicker"></div>
+          <div style="padding-top:15px"> <span style="color:#faadad; font-size:18px">■</span><span style="font-size: 10px; ">は休業日（土･日･祝日休）<br>
+            ※休業日のご注文は翌営業日より発送</span> </div>
+        </dd>
+      </dl>
+    </div>
+    <br class="clearfix">
+  </div>
+  <!-- company -->
+  
+  <p>サイト内の全画像・全文章の著作権は 楽天市場U-STREAM店に属しており無断使用・転載・画像リンクは禁止しております。<br>
+    Copyright(c) 2015 <a href="index.html">U-STREAM</a> all right reserved.</p>
+</footer>
+<!--foot e--> 
+<script type='text/javascript'>
+
+		    function getCalendar(){
+			  	$(function() {
+					$( "#datepicker" ).datepicker( $.datepicker.regional[ "ja" ] );
+				});
+			}
+
+			
+			<!-- 上下滚动 -->
+        	$(document).ready(function() {
+            	$('.carousel').carousel({
+  					interval: 2000
+				})
+        
+			});
+			<!-- 四张图片事件 -->
+			$("#four1").hover(function() {
+				$("#four1").attr("src", "images/slide/slide_second_small.jpg");
+			}, function() {
+				$("#four1").attr("src", "images/slide/slide_first_small.jpg");
+			});
+			$("#four2").hover(function() {
+				$("#four2").attr("src", "images/slide/slide_second_small_2.jpg");
+			}, function() {
+				$("#four2").attr("src", "images/slide/slide_first_small_2.jpg");
+			});
+			$("#four3").hover(function() {
+				$("#four3").attr("src", "images/slide/slide_second_small_3.jpg");
+			}, function() {
+				$("#four3").attr("src", "images/slide/slide_first_small_3.jpg");
+			});
+			$("#four4").hover(function() {
+				$("#four4").attr("src", "images/slide/slide_second_small_4.jpg");
+			}, function() {
+				$("#four4").attr("src", "images/slide/slide_first_small_4.jpg");
+			});
+
+			<!-- 右边固定元素事件 -->
+		  $("#right_fixed1").hover(function() {
+			$("#right_fixed1").animate({right : "0px"}, 400,function(){})
+		  }, function() {
+			$("#right_fixed1").animate({right : "-380px"}, 400,function(){})
+		  })
+		  $("#right_fixed2").hover(function() {
+			$("#right_fixed2").animate({right : "0px"}, 400,function(){})
+		  }, function() {
+			$("#right_fixed2").animate({right : "-380px"}, 400,function(){})
+		  })
+		  $("#right_fixed3").hover(function() {
+			$("#right_fixed3").animate({right : "0px"}, 400,function(){})
+		  }, function() {
+			$("#right_fixed3").animate({right : "-380px"}, 400,function(){})
+		  })
+        </script>
+</body>
+</html>

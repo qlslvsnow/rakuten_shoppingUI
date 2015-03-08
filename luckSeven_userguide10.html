@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rakuten</title>
+<style>
+body {
+	padding: 0 1em
+}
+h2 {
+	margin-bottom: 0
+}
+pre {
+	padding: 1em;
+	background-color: #ccc
+}
+</style>
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<link href="css/my.css" rel="stylesheet">
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-hover-dropdown.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/datepicker-ja.js"></script>
+<script src="js/gcalendar-holidays.js"></script>
+<style>
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align: center
+}
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+	width: auto
+}
+.ui-datepicker select.ui-datepicker-month {
+	margin-left: 1em
+}
+</style>
+<style type="text/css">
+.gcal-sunday .ui-state-default {
+	background-image: none;
+	background-color: #f99
+}
+.gcal-saturday .ui-state-default {
+	background-image: none;
+	background-color: #6cf
+}
+.ui-widget-content .gcal-holiday {
+	background-image: none;
+	background-color: #f9f
+}
+.nav-list .divider {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+</style>
+</head>
+<body style="font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif">
+<div id="top"></div>
+<div class="container">
+<div class="page-header" style="margin-bottom:0px; margin-top:40px;">
+  <div id="head01" style="float : left;">
+    <a href=""><img src="./images/head/head_1.jpg" /></a>
+  </div>
+  <div id="head02">
+    <img src="./images/head/head_2.jpg" usemap="#cart" />
+    <map name="cart">
+      <area href="javascript:;" shape="rect" alt="四角形" coords="410,50,470,100">
+    </map>
+  </div>
+  <div id="head03" style="padding-left:600px;line-height : 23px; background-color : #f8f5f0; font-size:12px;font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;">
+    <a href="">会社概要</a>
+    |
+    <a href="">お支払い方法</a>
+    |
+    <a href="">送料について</a>
+    |
+    <a href="">返品・交換について</a>
+    |
+    <a href="">お問い合わせ</a>
+  </div>
+</div>
+
+<h1>ご利用ガイド</h1>
+<div id="guide_navi">
+	<ul>
+		<li>
+			<a href="./luckSeven_userguide1.html"><img id="item1" src="./images/page2/left/guide_menu01_off.gif" alt="U-STREAM について"></a>
+		</li>
+		<li class="line">
+			<a href="./luckSeven_userguide2.html"><img id="item2" src="./images/page2/left/guide_menu02_off.gif" alt="ご注文について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide3.html"><img id="item3" src="./images/page2/left/guide_menu03_off.gif" alt="予約販売商品について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide4.html"><img id="item4" src="./images/page2/left/guide_menu04_off.gif" alt="お支払いについて"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide5.html"><img id="item5" src="./images/page2/left/guide_menu05_off.gif" alt="配送/送料について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide6.html"><img id="item6" src="./images/page2/left/guide_menu06_off.gif" alt="商品のキャンセル/返品/交換について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide7.html"><img id="item7" src="./images/page2/left/guide_menu07_off.gif" alt="返金について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide8.html"><img id="item8" src="./images/page2/left/guide_menu08_off.gif" alt="商品について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide9.html"><img id="item9" src="./images/page2/left/guide_menu09_off.gif" alt="ご利用環境について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide10.html"><img id="item10" src="./images/page2/left/guide_menu10_on.gif" alt="よくあるご質問"></a>
+		</li>
+		<li class="question"><a href="#01">ご注文についてのご質問</a></li>
+<li class="rank3"><a href="#001">カートにいれていた商品が、注文後在庫切れになったのですが</a></li>
+<li class="rank3"><a href="#002">「ご注文完了のお知らせ」メールが届かない</a></li>
+<li class="rank3"><a href="#003">注文をキャンセルしたい</a></li>
+<li class="rank3"><a href="#004">注文内容を変更したい</a></li>
+<li class="rank3"><a href="#005">注文確定後に他の商品を追加注文したい</a></li>
+<li class="rank3"><a href="#007">在庫切れの商品はもう買うことが出来ませんか？</a></li>
+<li class="rank3"><a href="#008">商品のサイズはどうやって選びますか？</a></li>
+
+<li class="question"><a href="#02">お支払いについての質問</a></li>
+<li class="rank3"><a href="#021">注文後、支払い方法の変更は出来ますか？</a></li>
+
+<li class="question"><a href="#03">配送/送料についてのご質問</a></li>
+<li class="rank3"><a href="#031">「指定なし」にした場合、注文からどれ位で届きますか？</a></li>
+<li class="rank3"><a href="#032">配送先/配送指定日/配送時間を変更したい</a></li>
+<li class="rank3"><a href="#033">発送済みの商品が、今どこにあるのか確認したい（商品が届かない）</a></li>
+<li class="rank3"><a href="#034">不在で商品が受け取れなかった場合、どうすれば良いですか？</a></li>
+<li class="rank3"><a href="#035">長期不在で商品が返品されてしまったのですが</a></li>
+<li class="rank3"><a href="#036">配送業者は変更できますか？</a></li>
+<li class="question"><a href="#04">商品についてのご質問</a></li>
+<li class="rank3"><a href="#041">商品全般についてのご質問</a></li>
+<li class="rank3"><a href="#044">在庫が残り何点あるのか知りたい</a></li>
+<!-- <li class="rank3"><a href="#045">プレゼント等の包装は出来ますか？</a></li> -->
+<li class="question"><a href="#05">メール対応について</a></li>
+<li class="rank3"><a href="#051">メールを送ったのに、返事がきません</a></li>
+<li class="rank3"><a href="#052">メールマガジン、U-STREAMからのメールが届かないのですが</a></li>
+<li class="rank3"><a href="#053">メールマガジンを解除したいのですが</a></li>
+<li class="rank3"><a href="#054">メールマガジンが夜中に届くのですが</a></li>
+<li class="question rank2last"><a href="#06">その他のご質問</a></li>
+<li class="rank3"><a href="#061">問い合わせの際にかかった通信費は請求できますか？</a></li>
+		<li>
+			<a href="./luckSeven_userguide11.html"><img id="item11" src="./images/page2/left/guide_menu11_off.gif" alt="カスタマーセンター"></a>
+		</li>
+	</ul>
+</div>
+
+
+<div id="guide_content" data-unuse="1">
+	<h2>よくあるご質問</h2>
+
+
+<h3 id="01" class="first">ご注文についてのご質問</h3>
+<div>
+<strong id="001">カートにいれていた商品が、注文後在庫切れになったのですが。</strong><br>
+楽天のシステム上ショッピングカートに商品がある状態では、在庫確保はされておりません。<br>
+ご購入のお手続きを進めていただき、ご注文を確定した段階で在庫確保となりますので、その前に<br>
+別のお客様が同商品の注文を確定した場合、在庫切れが生じます。<br>
+</div>
+
+<div>
+<strong id="002">「ご注文完了のお知らせ」メールが届かない</strong><br>
+ご注文時に入力されたールアドレスに誤りがあるか、もしくはご登録されているメールアドレスでのセキュリティやドメイン等の受信設定で当社サイトからのメールが受信されないように設定されている可能性がございます。<br>今一度ご確認ください。<br><br>
+携帯電話の場合は、ドメイン指定受信（@shop.rakuten.co.jp）の解除。<br>
+パソコンの場合は、迷惑メールボックスをご確認ください。<br>
+<br>
+メールが届かない場合は、カスタマーセンターへご連絡下さい。<br>
+<p class="linkfield">
+<a href="11_customer.html">→ カスタマーセンターはこちらから</a>
+</p>
+</div>
+
+<div>
+<strong id="003">注文をキャンセルしたい</strong><br>
+ご注文確定後のキャンセルに関しましては、受注完了メール配信前までにカスタマーセンターへご連絡ください。<br>
+<p class="linkfield">
+<a href="11_customer.html">→ カスタマーセンターはこちらから</a>
+</p>
+受注完了メール配信後のキャンセルは承っておりませんので、一度商品をお受け取り後、返品対応とさせていただきます。<br>
+<p class="linkfield">
+<a href="05_cancel.html">→ 返品についてはこちらから</a>
+</p>
+
+</div>
+
+<div>
+<strong id="004">注文内容を変更したい</strong><br>
+ご注文確定後の注文内容の変更（同商品のサイズ、カラー変更に限る）に関しましては、変更希望のサイズ、カラーの在庫がある場合は可能ですので、カスタマーセンターへご連絡下さい。<br>
+<p class="linkfield">
+<a href="11_customer.html">→ カスタマーセンターはこちらから</a>
+</p>
+尚、ご連絡は受注完了メール配信前までとなります。<br>
+受注完了メール配信後の注文内容の変更できませんので、一度商品をお受け取り後、交換対応とさせていただきます。<br>
+</div>
+
+<div>
+<strong id="005">注文確定後に他の商品を追加注文したい</strong><br>
+ご注文確定後に他の商品を追加注文したい場合は、別途ご注文して下さいます様お願いいたします。<br>
+</div>
+
+
+<div>
+<strong id="007">在庫切れの商品はもう買うことが出来ませんか？</strong><br>
+在庫切れの商品は再度販売する場合もございます。<br>
+再入荷があった場合は、当店HP上にて随時ご案内をいたしております。<br>
+<p class="linkfield">
+<a href="#">→ 再入荷商品一覧はこちらから</a>
+</p>
+また再入荷のお問い合わせにつきましては、商品番号、色、サイズを明記の上カスタマーセンターへご連絡いただくか、各商品ページの注文欄下に、"商品のお問い合わせ"フォームへのリンクがございますので、そちらもご利用下さい。<br>
+<p class="linkfield">
+<a href="11_customer.html">→ カスタマーセンターはこちらから</a>
+</p>
+</div>
+
+<div>
+<strong id="008">商品のサイズはどうやって選びますか？</strong><br>
+商品は、当サイト独自のサイズ表記に基づき、採寸を行っております。<br>
+お手持ちのお洋服と、商品サイズを照らし合わせて、ご希望サイズをお選びください。<br>
+<p class="linkfield">
+<a href="08_items.html">→ サイズ表記についてはこちらから</a>
+</p>
+</div>
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+
+<h3 id="02">お支払いについての質問</h3>
+<div>
+<strong id="021">注文後、支払い方法の変更は出来ますか？</strong><br>
+お支払い方法の変更は原則お受けしておりません。<br>
+ただし、クレジットカードの承認エラーの場合のみ、代金引換に変更のうえ、配送させて頂きます。（もしくはキャンセルして再注文とさせていただきます）<br>
+<br>
+<!--
+<strong id="022">コンビニ払い、銀行振込はできないのですか？</strong><br>
+「NP後払いサービス」で、コンビニ払い、銀行振込をご利用いただけます。<br>詳細はNP後払いについてをご覧下さい。<br>
+<p class="linkfield">
+<a href="03_payment.html#03">→ NP後払いについてはこちらから</a>
+</p>
+
+<strong id="023">NP後払いサービスとは何ですか？</strong><br>
+商品の到着を確認してから、「コンビニ」「郵便局」「銀行」で後払いできる安心・簡単な決済方法です。<br>
+ご請求書は、商品とは別に郵送されますので、発行から14日以内にお支払いをお願いします。<br>
+詳細はNP後払いについてをご覧下さい。<br>
+<p class="linkfield">
+<a href="03_payment.html#03">→ NP後払いについてはこちらから</a>
+</p>
+-->
+</div>
+
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+
+<h3 id="03">配送/送料についてのご質問</h3>
+<div>
+<strong id="031">「指定なし」にした場合、注文からどれ位で届きますか？</strong><br>
+注文を受け付けた日の、翌日営業日までに商品を出荷いたします。<br>
+配送にかかる日数は「商品の納期について」をご覧下さい<br>
+<p class="linkfield">
+<a href="05_delivary.html#03">→ 商品の納期についてについてはこちらから</a>
+</p>
+※SALE期間中、長期休暇明け等、ご注文が殺到した場合は、発送までにお時間を頂く場合もございます。<br>
+※配送業者の繁忙期・年末年始・悪天候時は、配達状況・交通事情により配送が若干遅れる場合がございます。あらかじめご了承ください。<br>
+</div>
+
+
+<div>
+<strong id="032">配送先/配送指定日/配送時間を変更したい</strong><br>
+配送先・配送指定日・配送指定時間等、配送情報のご変更は、最初にご注文お手続きをお取りいただいた日の翌日午前8:59までにカスタマーセンターへご連絡ください。<br>
+<p class="linkfield">
+<a href="11_customer.html">→ カスタマーセンターはこちらから</a>
+</p>
+それ以後のご変更に関しましては、発送完了メールにお荷物番号を記載しておりますので、お客様ご自身で配送業者へご連絡ください。<br>
+</div>
+
+
+<div>
+  <p><strong id="033">発送済みの商品が、今どこにあるのか確認したい（商品が届かない）</strong><br>
+    発送完了後にご連絡いたします“【U-STREAM】発送完了のお知らせ”メールに、お客様の伝票番号が記載されておりますので、伝票番号をご確認の上、各運送会社のホームページより発送状況をご確認ください。<br>
+<p class="flame" style="width:300px;">
+佐川急便<br>
+<a href="http://www.sagawa-exp.co.jp/" target="_blank">http://www.sagawa-exp.co.jp/</a>
+</p>
+  </p>
+</div>
+
+<div>
+<strong id="034">不在で商品が受け取れなかった場合、どうすれば良いですか？</strong><br>
+ご不在の場合は配送会社が不在通知を残していきますので、配送業者に再配達の依頼をお願いいたします。<br>
+お荷物保管期限は最初に「ご不在連絡票」が投函された日より１週間（「ご不在連絡票」に保管期限の記載がございます）となります。お荷物保管期限を超えますと返品となりますのでご了承ください。<br>
+再配達可能期間内にお客様の配送希望日を調整の上、商品のお受け取りをお願い致します。<br>
+<p class="flame" style="width:300px;">
+佐川急便<br>
+<a href="http://www.sagawa-exp.co.jp/" target="_blank">http://www.sagawa-exp.co.jp/</a>
+</p>
+</div>
+
+<div>
+<strong id="035">長期不在で商品が返品されてしまったのですが</strong><br>
+長期不在などで、配送した商品が当社に戻ってきた場合には、やむを得ずキャンセルとさせていただきますので、十分にご注意ください。キャンセル処理後の再発送はお受けいたしかねますので、長期にご不在をされる際は商品ご注文時にご連絡をお願いいたします。<br><br>
+お客様都合による受取辞退、長期不在、再発送をされますと、利用制限や発送前の商品を含めご注文を承ることができない場合もございますので、商品は必ずお受取りをお願いいたします。<br>
+</div>
+
+<div>
+<strong id="036">配送業者は変更できますか？</strong><br>
+お客様都合での、他配送業者での発送依頼はお受けできませんのでご了承下さい。<br>
+</div>
+
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+
+<h3 id="04">商品についてのご質問</h3>
+<div>
+<strong id="041">商品全般についてのご質問</strong><br>
+商品に関するご質問の際には、商品番号、色、サイズを明記の上、ご質問をくださいます様お願いします。<br>
+</div>
+<div>
+  <strong id="044">在庫が残り何点あるのか知りたい</strong><br>
+在庫数に関しましては、商品番号、色、サイズを明記の上、カスタマーサポートへご連絡ください。<br>
+<p class="linkfield">
+<a href="11_customer.html">→ カスタマーセンターはこちらから</a>
+</p>
+</div>
+
+<!--<div>
+
+<strong id="045">プレゼント等の包装は出来ますか？</strong><br>
+2011年11月30日より、ギフトラッピングサービスの受付を開始いたしました。詳細につきましてはこちらのページをご参照ください。<br>
+<p class="linkfield">
+<a href="http://item.rakuten.co.jp/ustream/rap001/">→ ギフトラッピングについてはこちらから</a>
+</p>
+</div>-->
+
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+
+<h3 id="05">メール対応について</h3>
+<div>
+<strong id="051">メールを送ったのに、返事がきません。</strong><br>
+当店休業日にお問い合わせいただいたメールのご返信は、翌営業日にご返信させていただきます。<br>
+長期休業日後など、多数のお問い合わせをいただいた場合は、順次ご返信となりますのでご了承ください。<br>
+また、携帯電話の場合はドメイン指定の解除、パソコンの場合は迷惑メールボックスをご確認下さい。<br>
+</div>
+
+<div>
+<strong id="052">メールマガジン、U-STREAMからのメールが届かないのですが</strong><br>
+ご入力されたメールアドレスに誤りがあるか、もしくはご登録されているメールアドレスでのセキュリティやドメイン等の受信設定で当社サイトからのメールが受信されないように設定されている可能性がございます。今一度ご確認ください。<br>
+<br>
+携帯電話の場合は、ドメイン指定受信（@shop.rakuten.co.jp）の解除。<br>
+パソコンの場合は、迷惑メールボックスをご確認ください。<br>
+</div>
+
+<div>
+<strong id="053">メールマガジンを解除したいのですが。</strong><br>
+メールマガジンの配信停止をご希望の方は、配信停止フォームから解除して下さい。<br>
+
+<p class="linkfield">
+<a href="http://www.rakuten.co.jp/u-stream/news.html">→ 配信停止フォームはこちらから</a>
+</p>
+</div>
+
+<div>
+<strong id="054">メールマガジンが夜中に届くのですが。</strong><br>
+当店のメールマガジンは楽天のシステムを使った配信を行っております。楽天のシステム上、夜中のメールマガジン配信は原則行っておりません。その様な状況がございましたら、ご契約されているプロバイダー及び、携帯電話会社へご連絡をお願いします。
+<br>
+</div>
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+
+<h3 id="06">その他のご質問</h3>
+<div>
+<strong id="061">問い合わせの際にかかった通信費は請求できますか？</strong><br>
+お問い合わせの際にかかる通信費（電話代など）は、お支払いできません。<br>
+</div>
+
+<!-- <div>
+<strong id="062">動画が見れません</strong><br>
+動画コンテンツおいては、Adobe社の Flash Playerを利用しております。<br>
+ ご利用の端末によってはプラグインがインストールされていない可能性がございますので、弊社推奨環境をご確認いただきますようお願いいたします。<br>
+<p class="linkfield">
+<a href="08_environment.html">→推奨環境の確認はこちらから</a>
+</p>
+</div>-->
+
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+</div>
+
+<!--foot s-->
+<footer class="panel-footer" style="text-align:center; clear:both;"> <img src="images/footerImg/foot-ttl.png">
+  <div id="company">
+    <div class="left">
+      <dl>
+        <dt><a href="html/guide/04_payment.html">お支払について</a></dt>
+        <dd>お支払いは　<a href="html/guide/04_payment.html#02">クレジットカード決済</a>・<a href="html/guide/04_payment.html#06">楽天Edy決済</a>・<a href="html/guide/04_payment.html#04">セブンイレブン決済</a>・<a href="html/guide/04_payment.html#05">ローソン決済・代金引換</a>・NP後払いよりお選びいただけます。<br>
+        </dd>
+        <dt><a href="html/guide/05_delivary.html">配送料について</a></dt>
+        <dd>【業者】佐川急便 </dd>
+        <dd>【送料】送料は、全国600円（税込）です。※沖縄県の場合は1,200円（税込）となります</dd>
+        <dd>【代引手数料】一律324円 </dd>
+        <dd>※１配送先につき、合計8,000円以上ご注文頂いた場合送料が0円になります。</dd>
+        <hr>
+        <dt><a href="html/guide/07_payback.html">交換・返品について</a></dt>
+        <dd>お客様都合によるサイズ交換や返品につきましては、当店の定める条件を満たす場合のみお受けしております。<br>
+          ご希望の方は必ず、注意点をご確認いただき、商品お受け取り後 １週間以内に当店までご連絡くださいませ。</dd>
+      </dl>
+    </div>
+    <div class="right">
+      <dl>
+        <dt><a href="html/guide/11_customer.html">お問い合せ</a></dt>
+        <dd>【楽天市場】株式会社ＣＩＢＥＬＥＳ</dd>
+        <dd>時間 / 10：00 ～ 18：00 （月～金） </dd>
+        <dd>休業日 / 土曜日 日曜日 ・祝日</dd>
+        <dd>住所：〒350-1145 埼玉県川越市 清水町16-1-201号</dd>
+        <dd>TEL：04-9293-9558</dd>
+        <dd>MAIL:cibeles@shop.rakuten.co.jp</dd>
+        <dd>
+          <div style="padding-top:4px;" id="datepicker"></div>
+          <div style="padding-top:2px"> <span style="color:#faadad; font-size:16px">■</span><span style="font-size: 9px; ">は休業日（土･日･祝日休）<br>
+            ※休業日のご注文は翌営業日より発送</span> </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</footer>
+<!--foot e--> 
+
+<script type='text/javascript'>
+
+			$("#item2").hover(
+				function() {
+					$("#item2").attr("src", "./images/page2/left/guide_menu02_on.gif");
+				},
+				function() {
+					$("#item2").attr("src", "./images/page2/left/guide_menu02_off.gif");
+				}
+			);
+			$("#item3").hover(
+				function() {
+					$("#item3").attr("src", "./images/page2/left/guide_menu03_on.gif");
+				},
+				function() {
+					$("#item3").attr("src", "./images/page2/left/guide_menu03_off.gif");
+				}
+			);
+			$("#item4").hover(
+				function() {
+					$("#item4").attr("src", "./images/page2/left/guide_menu04_on.gif");
+				},
+				function() {
+					$("#item4").attr("src", "./images/page2/left/guide_menu04_off.gif");
+				}
+			);
+			$("#item5").hover(
+				function() {
+					$("#item5").attr("src", "./images/page2/left/guide_menu05_on.gif");
+				},
+				function() {
+					$("#item5").attr("src", "./images/page2/left/guide_menu05_off.gif");
+				}
+			);
+			$("#item6").hover(
+				function() {
+					$("#item6").attr("src", "./images/page2/left/guide_menu06_on.gif");
+				},
+				function() {
+					$("#item6").attr("src", "./images/page2/left/guide_menu06_off.gif");
+				}
+			);
+			$("#item7").hover(
+				function() {
+					$("#item7").attr("src", "./images/page2/left/guide_menu07_on.gif");
+				},
+				function() {
+					$("#item7").attr("src", "./images/page2/left/guide_menu07_off.gif");
+				}
+			);
+			$("#item8").hover(
+				function() {
+					$("#item8").attr("src", "./images/page2/left/guide_menu08_on.gif");
+				},
+				function() {
+					$("#item8").attr("src", "./images/page2/left/guide_menu08_off.gif");
+				}
+			);
+			$("#item9").hover(
+				function() {
+					$("#item9").attr("src", "./images/page2/left/guide_menu09_on.gif");
+				},
+				function() {
+					$("#item9").attr("src", "./images/page2/left/guide_menu09_off.gif");
+				}
+			);
+			$("#item1").hover(
+				function() {
+					$("#item1").attr("src", "./images/page2/left/guide_menu1_on.gif");
+				},
+				function() {
+					$("#item1").attr("src", "./images/page2/left/guide_menu1_off.gif");
+				}
+			);
+			$("#item11").hover(
+				function() {
+					$("#item11").attr("src", "./images/page2/left/guide_menu11_on.gif");
+				},
+				function() {
+					$("#item11").attr("src", "./images/page2/left/guide_menu11_off.gif");
+				}
+			);
+
+            $(function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide();
+
+                $( "#treeLab01" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide(); 
+					  $.setArrow("#tree01", "#arrow01");
+//					  if ($("#tree01" ).is(":visible")) {
+//						  	$("#arrow01").removeClass("glyphicon glyphicon-chevron-down");
+//					 		$("#arrow01").addClass("glyphicon glyphicon-chevron-right");
+//					  } else {
+//						  	$("#arrow01").removeClass("glyphicon glyphicon-chevron-right");
+//					 		$("#arrow01").addClass("glyphicon glyphicon-chevron-down");
+//						}
+					  
+            		}							
+					
+                );
+				
+                $( "#treeLab02" ).click( 
+  					function() {
+					  $("#tree01").hide();
+					  $("#tree03").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide();
+					  $.setArrow("#tree02", "#arrow02");
+            		}       		
+                );
+				
+                $( "#treeLab03" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree01").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide();
+					  $.setArrow("#tree03", "#arrow03");
+            		}       		
+                );
+				
+                $( "#treeLab04" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree01").hide();
+					  $("#tree05").hide();
+					  $.setArrow("#tree04", "#arrow04");
+            		}       		
+                );
+				
+                $( "#treeLab05" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree01").hide();
+					  $("#tree04").hide();
+					  $.setArrow("#tree05", "#arrow05");
+            		}       		
+                );
+            });
+		  
+		  
+		  $.extend({setArrow:function(treeId, arrowId){
+			  
+				  if ($(treeId).is(":visible")) {
+						$(arrowId).removeClass("glyphicon glyphicon-chevron-down");
+						$(arrowId).addClass("glyphicon glyphicon-chevron-right");
+				  } else {
+						$(arrowId).removeClass("glyphicon glyphicon-chevron-right");
+						$(arrowId).addClass("glyphicon glyphicon-chevron-down");
+				}
+			  }});
+		  
+            $(function() {
+
+                $( "#datepicker" ).datepicker( { 
+                    changeYear: true, 
+                    changeMonth: true
+					,beforeShow : {
+						
+					},                		
+                });
+            });
+
+
+			
+
+            $(document).ready(function () {
+                $('label.tree-toggler').click(function () {
+                    $(this).parent().children('ul.tree').toggle(300);
+                });
+            });
+
+			
+			
+			<!-- 四张图片事件 -->
+			$("#four1").hover(function() {
+				$("#four1").attr("src", "images/slides/slide_second_small.jpg");
+			}, function() {
+				$("#four1").attr("src", "images/slides/slide_first_small.jpg");
+			});
+			$("#four2").hover(function() {
+				$("#four2").attr("src", "images/slides/slide_second_small_2.jpg");
+			}, function() {
+				$("#four2").attr("src", "images/slides/slide_first_small_2.jpg");
+			});
+			$("#four3").hover(function() {
+				$("#four3").attr("src", "images/slides/slide_second_small_3.jpg");
+			}, function() {
+				$("#four3").attr("src", "images/slides/slide_first_small_3.jpg");
+			});
+			$("#four4").hover(function() {
+				$("#four4").attr("src", "images/slides/slide_second_small_4.jpg");
+			}, function() {
+				$("#four4").attr("src", "images/slides/slide_first_small_4.jpg");
+			});
+
+		
+			$(document).ready(function(){	
+	//Click event to scroll to top
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	});
+        </script>
+</body>
+</html>

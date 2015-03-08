@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rakuten</title>
+<style>
+body {
+	padding: 0 1em
+}
+h2 {
+	margin-bottom: 0
+}
+pre {
+	padding: 1em;
+	background-color: #ccc
+}
+</style>
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<link href="css/my.css" rel="stylesheet">
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-hover-dropdown.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/datepicker-ja.js"></script>
+<script src="js/gcalendar-holidays.js"></script>
+<style>
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align: center
+}
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+	width: auto
+}
+.ui-datepicker select.ui-datepicker-month {
+	margin-left: 1em
+}
+</style>
+<style type="text/css">
+.gcal-sunday .ui-state-default {
+	background-image: none;
+	background-color: #f99
+}
+.gcal-saturday .ui-state-default {
+	background-image: none;
+	background-color: #6cf
+}
+.ui-widget-content .gcal-holiday {
+	background-image: none;
+	background-color: #f9f
+}
+.nav-list .divider {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+</style>
+</head>
+<body style="font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif">
+<div id="top"></div>
+<div class="container">
+<div class="page-header" style="margin-bottom:0px; margin-top:40px;">
+  <div id="head01" style="float : left;">
+    <a href=""><img src="./images/head/head_1.jpg" /></a>
+  </div>
+  <div id="head02">
+    <img src="./images/head/head_2.jpg" usemap="#cart" />
+    <map name="cart">
+      <area href="javascript:;" shape="rect" alt="四角形" coords="410,50,470,100">
+    </map>
+  </div>
+  <div id="head03" style="padding-left:600px;line-height : 23px; background-color : #f8f5f0; font-size:12px;font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;">
+    <a href="">会社概要</a>
+    |
+    <a href="">お支払い方法</a>
+    |
+    <a href="">送料について</a>
+    |
+    <a href="">返品・交換について</a>
+    |
+    <a href="">お問い合わせ</a>
+  </div>
+</div>
+
+<h1>ご利用ガイド</h1>
+<div id="guide_navi">
+	<ul>
+		<li>
+			<a href="./luckSeven_userguide1.html"><img id="item1" src="./images/page2/left/guide_menu01_off.gif" alt="U-STREAM について"></a>
+		</li>
+		<li class="line">
+			<a href="./luckSeven_userguide2.html"><img id="item2" src="./images/page2/left/guide_menu02_off.gif" alt="ご注文について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide3.html"><img id="item3" src="./images/page2/left/guide_menu03_off.gif" alt="予約販売商品について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide4.html"><img id="item4" src="./images/page2/left/guide_menu04_off.gif" alt="お支払いについて"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide5.html"><img id="item5" src="./images/page2/left/guide_menu05_off.gif" alt="配送/送料について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide6.html"><img id="item6" src="./images/page2/left/guide_menu06_off.gif" alt="商品のキャンセル/返品/交換について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide7.html"><img id="item7" src="./images/page2/left/guide_menu07_off.gif" alt="返金について"></a>
+		</li>
+		<div id='scroll1' style="margin-left:0px;">
+		<li>
+			<a href="./luckSeven_userguide8.html"><img id="item8" src="./images/page2/left/guide_menu08_on.gif" alt="商品について"></a>
+		</li>
+		<div id='scroll2' style="margin-left:-40px;width:300px;border: 1px solid #D5D5D5;">
+			<li class="rank2"><a id="link1" href="#01">サイズ表記について</a></li>
+			<li class="rank2"><a id="link2" href="#02">カラーについて</a></li>
+		</div>
+		</div>
+		<li>
+			<a href="./luckSeven_userguide9.html"><img id="item9" src="./images/page2/left/guide_menu09_off.gif" alt="ご利用環境について"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide10.html"><img id="item10" src="./images/page2/left/guide_menu10_off.gif" alt="よくあるご質問"></a>
+		</li>
+		<li>
+			<a href="./luckSeven_userguide11.html"><img id="item11" src="./images/page2/left/guide_menu11_off.gif" alt="カスタマーセンター"></a>
+		</li>
+	</ul>
+</div>
+
+
+<div id="guide_content" data-unuse="1">
+	<h2>商品について</h2>
+
+
+
+<h3 id="01" class="first">サイズ表記について</h3>
+<div>
+商品ページ内のサイズ表は、実際の商品を採寸した「実寸」を記載しています。<br>
+測定したサイズとお求めになる商品サイズを照らし合わせて、お客様が希望するものをご確認下さい。<br>
+採寸位置や方法になり計測数値が異なる場合があります。
+商品によっては1～2cmの誤差が生じる場合がございます。<br>
+</div>
+
+
+<h3 id="02">カラーについて</h3>
+<div>
+当社では、スタジオでストロボを使用して撮影しております。<br>
+商品の画像は、可能な限り商品に近いカラーにて掲載をしておりますが、使用しているパソコンのモニターや、携帯端末の機種により実際の商品のカラーと異なって見える場合がございます。<br>
+<br>
+同じカラー名でも商品により色味が異なりますので、色味につきましては各商品ページの[ Color pattern ]画像にてご確認下さい。<br>
+</div>
+
+<div class="totop"><a href="#top" class="scrollToTop"><img src="./images/page2/top.gif"></a></div>
+</div>
+
+<!--foot s-->
+<footer class="panel-footer" style="text-align:center; clear:both;"> <img src="images/footerImg/foot-ttl.png">
+  <div id="company">
+    <div class="left">
+      <dl>
+        <dt><a href="html/guide/04_payment.html">お支払について</a></dt>
+        <dd>お支払いは　<a href="html/guide/04_payment.html#02">クレジットカード決済</a>・<a href="html/guide/04_payment.html#06">楽天Edy決済</a>・<a href="html/guide/04_payment.html#04">セブンイレブン決済</a>・<a href="html/guide/04_payment.html#05">ローソン決済・代金引換</a>・NP後払いよりお選びいただけます。<br>
+        </dd>
+        <dt><a href="html/guide/05_delivary.html">配送料について</a></dt>
+        <dd>【業者】佐川急便 </dd>
+        <dd>【送料】送料は、全国600円（税込）です。※沖縄県の場合は1,200円（税込）となります</dd>
+        <dd>【代引手数料】一律324円 </dd>
+        <dd>※１配送先につき、合計8,000円以上ご注文頂いた場合送料が0円になります。</dd>
+        <hr>
+        <dt><a href="html/guide/07_payback.html">交換・返品について</a></dt>
+        <dd>お客様都合によるサイズ交換や返品につきましては、当店の定める条件を満たす場合のみお受けしております。<br>
+          ご希望の方は必ず、注意点をご確認いただき、商品お受け取り後 １週間以内に当店までご連絡くださいませ。</dd>
+      </dl>
+    </div>
+    <div class="right">
+      <dl>
+        <dt><a href="html/guide/11_customer.html">お問い合せ</a></dt>
+        <dd>【楽天市場】株式会社ＣＩＢＥＬＥＳ</dd>
+        <dd>時間 / 10：00 ～ 18：00 （月～金） </dd>
+        <dd>休業日 / 土曜日 日曜日 ・祝日</dd>
+        <dd>住所：〒350-1145 埼玉県川越市 清水町16-1-201号</dd>
+        <dd>TEL：04-9293-9558</dd>
+        <dd>MAIL:cibeles@shop.rakuten.co.jp</dd>
+        <dd>
+          <div style="padding-top:4px;" id="datepicker"></div>
+          <div style="padding-top:2px"> <span style="color:#faadad; font-size:16px">■</span><span style="font-size: 9px; ">は休業日（土･日･祝日休）<br>
+            ※休業日のご注文は翌営業日より発送</span> </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</footer>
+<!--foot e--> 
+
+<script type='text/javascript'>
+
+			$("#item2").hover(
+				function() {
+					$("#item2").attr("src", "./images/page2/left/guide_menu02_on.gif");
+				},
+				function() {
+					$("#item2").attr("src", "./images/page2/left/guide_menu02_off.gif");
+				}
+			);
+			$("#item3").hover(
+				function() {
+					$("#item3").attr("src", "./images/page2/left/guide_menu03_on.gif");
+				},
+				function() {
+					$("#item3").attr("src", "./images/page2/left/guide_menu03_off.gif");
+				}
+			);
+			$("#item4").hover(
+				function() {
+					$("#item4").attr("src", "./images/page2/left/guide_menu04_on.gif");
+				},
+				function() {
+					$("#item4").attr("src", "./images/page2/left/guide_menu04_off.gif");
+				}
+			);
+			$("#item5").hover(
+				function() {
+					$("#item5").attr("src", "./images/page2/left/guide_menu05_on.gif");
+				},
+				function() {
+					$("#item5").attr("src", "./images/page2/left/guide_menu05_off.gif");
+				}
+			);
+			$("#item6").hover(
+				function() {
+					$("#item6").attr("src", "./images/page2/left/guide_menu06_on.gif");
+				},
+				function() {
+					$("#item6").attr("src", "./images/page2/left/guide_menu06_off.gif");
+				}
+			);
+			$("#item7").hover(
+				function() {
+					$("#item7").attr("src", "./images/page2/left/guide_menu07_on.gif");
+				},
+				function() {
+					$("#item7").attr("src", "./images/page2/left/guide_menu07_off.gif");
+				}
+			);
+			$("#item1").hover(
+				function() {
+					$("#item1").attr("src", "./images/page2/left/guide_menu01_on.gif");
+				},
+				function() {
+					$("#item1").attr("src", "./images/page2/left/guide_menu01_off.gif");
+				}
+			);
+			$("#item9").hover(
+				function() {
+					$("#item9").attr("src", "./images/page2/left/guide_menu09_on.gif");
+				},
+				function() {
+					$("#item9").attr("src", "./images/page2/left/guide_menu09_off.gif");
+				}
+			);
+			$("#item10").hover(
+				function() {
+					$("#item10").attr("src", "./images/page2/left/guide_menu10_on.gif");
+				},
+				function() {
+					$("#item10").attr("src", "./images/page2/left/guide_menu10_off.gif");
+				}
+			);
+			$("#item11").hover(
+				function() {
+					$("#item11").attr("src", "./images/page2/left/guide_menu11_on.gif");
+				},
+				function() {
+					$("#item11").attr("src", "./images/page2/left/guide_menu11_off.gif");
+				}
+			);
+
+            $(function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide();
+
+                $( "#treeLab01" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide(); 
+					  $.setArrow("#tree01", "#arrow01");
+//					  if ($("#tree01" ).is(":visible")) {
+//						  	$("#arrow01").removeClass("glyphicon glyphicon-chevron-down");
+//					 		$("#arrow01").addClass("glyphicon glyphicon-chevron-right");
+//					  } else {
+//						  	$("#arrow01").removeClass("glyphicon glyphicon-chevron-right");
+//					 		$("#arrow01").addClass("glyphicon glyphicon-chevron-down");
+//						}
+					  
+            		}							
+					
+                );
+				
+                $( "#treeLab02" ).click( 
+  					function() {
+					  $("#tree01").hide();
+					  $("#tree03").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide();
+					  $.setArrow("#tree02", "#arrow02");
+            		}       		
+                );
+				
+                $( "#treeLab03" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree01").hide();
+					  $("#tree04").hide();
+					  $("#tree05").hide();
+					  $.setArrow("#tree03", "#arrow03");
+            		}       		
+                );
+				
+                $( "#treeLab04" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree01").hide();
+					  $("#tree05").hide();
+					  $.setArrow("#tree04", "#arrow04");
+            		}       		
+                );
+				
+                $( "#treeLab05" ).click( 
+  					function() {
+					  $("#tree02").hide();
+					  $("#tree03").hide();
+					  $("#tree01").hide();
+					  $("#tree04").hide();
+					  $.setArrow("#tree05", "#arrow05");
+            		}       		
+                );
+            });
+		  
+		  
+		  $.extend({setArrow:function(treeId, arrowId){
+			  
+				  if ($(treeId).is(":visible")) {
+						$(arrowId).removeClass("glyphicon glyphicon-chevron-down");
+						$(arrowId).addClass("glyphicon glyphicon-chevron-right");
+				  } else {
+						$(arrowId).removeClass("glyphicon glyphicon-chevron-right");
+						$(arrowId).addClass("glyphicon glyphicon-chevron-down");
+				}
+			  }});
+		  
+            $(function() {
+
+                $( "#datepicker" ).datepicker( { 
+                    changeYear: true, 
+                    changeMonth: true
+					,beforeShow : {
+						
+					},                		
+                });
+            });
+
+
+			
+
+            $(document).ready(function () {
+                $('label.tree-toggler').click(function () {
+                    $(this).parent().children('ul.tree').toggle(300);
+                });
+            });
+
+			
+			
+			<!-- 四张图片事件 -->
+			$("#four1").hover(function() {
+				$("#four1").attr("src", "images/slides/slide_second_small.jpg");
+			}, function() {
+				$("#four1").attr("src", "images/slides/slide_first_small.jpg");
+			});
+			$("#four2").hover(function() {
+				$("#four2").attr("src", "images/slides/slide_second_small_2.jpg");
+			}, function() {
+				$("#four2").attr("src", "images/slides/slide_first_small_2.jpg");
+			});
+			$("#four3").hover(function() {
+				$("#four3").attr("src", "images/slides/slide_second_small_3.jpg");
+			}, function() {
+				$("#four3").attr("src", "images/slides/slide_first_small_3.jpg");
+			});
+			$("#four4").hover(function() {
+				$("#four4").attr("src", "images/slides/slide_second_small_4.jpg");
+			}, function() {
+				$("#four4").attr("src", "images/slides/slide_first_small_4.jpg");
+			});
+
+			$(document).ready(function(){	
+				//Click event to scroll to top
+				$('.scrollToTop').click(function(){
+					$('html, body').animate({scrollTop : 0},800);
+					return false;
+				});
+			});
+
+			$('#link1').click(function() {
+				$('html, body').animate({
+		        	scrollTop: $("#01").offset().top
+		    	}, 500);
+			});
+			$('#link2').click(function() {
+				$('html, body').animate({
+		        	scrollTop: $("#02").offset().top
+		    	}, 500);
+			});
+			$(function(){
+		  		$(window).scroll(function(){
+			    	var aTop = $('#scroll1').height();
+			    	if($(this).scrollTop()>aTop){
+			        	$('#scroll1').css({position:'fixed'});
+			        	$('#scroll1').css('top','0px');
+						$('#scroll2').css('background-color','white');
+
+			    	} else {
+			    		$('#scroll1').css({position:'static'});
+			    	}
+		  		});
+			});
+        </script>
+</body>
+</html>
