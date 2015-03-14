@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天 luckSeven</title>
+
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<link href="css/my.css" rel="stylesheet">
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-hover-dropdown.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/datepicker-ja.js"></script>
+<script src="js/gcalendar-holidays.js"></script>
+
+<style type="text/css">
+body {
+	padding: 0 1em
+}
+h2 {
+	margin-bottom: 0
+}
+pre {
+	padding: 1em;
+	background-color: #ccc
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align: center
+}
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+	width: auto
+}
+.ui-datepicker select.ui-datepicker-month {
+	margin-left: 1em
+}
+
+.gcal-sunday .ui-state-default {
+	background-image: none;
+	background-color: #f99
+}
+.gcal-saturday .ui-state-default {
+	background-image: none;
+	background-color: #6cf
+}
+.ui-widget-content .gcal-holiday {
+	background-image: none;
+	background-color: #f9f
+}
+.nav-list .divider {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+iframe {
+	z-index:100;
+}
+#myCarousel_horizon {
+	z-index: 1;
+}
+</style>
+
+<script type="text/javascript">
+//	window.setInterval("reinitIframe()", 200);
+	
+</script>
+
+</head>
+<body>
+<div class="container">
+
+<iframe style="margin-left:-75px;" id="iframe01" frameborder="0" allowfullscreen wmode="transparent" scrolling="no" height="212px" src="html/common/header.html" width="1200px"></iframe>
+
+<iframe style="margin: -47px -8px 0px;" align="left"  id="iframe02" frameborder="0" allowfullscreen wmode="transparent" scrolling="no" src="html/common/luckSeven_detailSide.html" width="220px"></iframe>
+
+<iframe id="iframe04" style="margin-left:10px" frameborder="0" allowfullscreen wmode="transparent" scrolling="no" src="part_detail.html" width="800px"></iframe>
+
+
+
+<!--foot s-->
+<iframe style="margin-left:-75px;" id="iframe03" frameborder="0" allowfullscreen wmode="transparent" scrolling="no" height="435px" src="html/common/footer.html" width="1200px"></iframe>
+<!--foot e--> 
+
+<script type='text/javascript'>
+
+		
+		<!-- 右边固定元素事件 -->
+		$("#right_fixed1").hover(function() {
+		$("#right_fixed1").animate({right : "0px"}, 400,function(){})
+			}, function() {
+		$("#right_fixed1").animate({right : "-400px"}, 400,function(){})
+			})
+			$("#right_fixed2").hover(function() {
+		$("#right_fixed2").animate({right : "0px"}, 400,function(){})
+			}, function() {
+		$("#right_fixed2").animate({right : "-400px"}, 400,function(){})
+			})
+			$("#right_fixed3").hover(function() {
+		$("#right_fixed3").animate({right : "0px"}, 400,function(){})
+			}, function() {
+		$("#right_fixed3").animate({right : "-400px"}, 400,function(){})
+			})
+				
+</script>
+</body>
+</html>

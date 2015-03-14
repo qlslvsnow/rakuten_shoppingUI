@@ -361,3 +361,10 @@ border: 1px solid #D5D5D5;
 	  padding-bottom:30px;
 	 margin-left: 30px; 
 }
+
+#scrollToTop{
+	position:fixed;
+	bottom:50px;
+	right:100px;
+	display:none;
+}

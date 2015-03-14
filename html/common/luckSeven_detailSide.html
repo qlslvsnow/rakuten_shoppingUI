@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天 luckSeven</title>
+
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<link href="../../css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<link href="../../css/my.css" rel="stylesheet">
+<script src="../../js/jquery-1.11.2.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/bootstrap-hover-dropdown.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/datepicker-ja.js"></script>
+<script src="../../js/gcalendar-holidays.js"></script>
+
+<style type="text/css">
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	padding: 0 1em
+}
+h2 {
+	margin-bottom: 0
+}
+pre {
+	padding: 1em;
+	background-color: #ccc
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align: center
+}
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+	width: auto
+}
+.ui-datepicker select.ui-datepicker-month {
+	margin-left: 1em
+}
+
+.gcal-sunday .ui-state-default {
+	background-image: none;
+	background-color: #f99
+}
+.gcal-saturday .ui-state-default {
+	background-image: none;
+	background-color: #6cf
+}
+.ui-widget-content .gcal-holiday {
+	background-image: none;
+	background-color: #f9f
+}
+.nav-list .divider {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+iframe {
+	z-index:100;
+}
+#myCarousel_horizon {
+	z-index: 1;
+}
+</style>
+</head>
+<body>
+
+<!-- content menu-->
+<div style="width:200px;">
+<div style="background-color: #f5f5f5; margin: 2px 0px 3px; border: 1px solid #cccccc; font-size:26px; text-align:center;font-weight:bold; padding:20px; margin:52px 0px 5px;>
+<span style="center">カテゴリ</span>
+<div style="font-size:14px;"><span >index iteam</span></div></div>
+<div class="well">
+<!--<div style="overflow-y: scroll; overflow-x: hidden; height: 750px;">-->
+<ul class="nav nav-list">
+<li>
+<label id="treeLab01" class="tree-toggler nav-header">バッグ<span id="arrow01" style="padding-left:100px" class="glyphicon glyphicon-chevron-down"></span></label>
+<ul id="tree01" class="nav nav-list tree fontSet">
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000148/">トートバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000149/">ハンドバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000150/">ビジネスバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000151/">リュック・デイパック</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000152/">ボストンバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000153/">かごバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000154/">パーティーバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000155/">ボディバッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000156/">化粧ポーチ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000157/">収納バッグ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000158/">その他バッグ</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li>
+<label id="treeLab02" class="tree-toggler nav-header">財 布<span id="arrow02" style="padding-left:110px" class="glyphicon glyphicon-chevron-right"></span></label>
+<ul id="tree02" class="nav nav-list tree fontSet">
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000215/">長財布</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000216/">折り財布</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000217/">小銭入れ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000218/">がま口財布</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000219/">スマホ財布</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li>
+<label id="treeLab03" class="tree-toggler nav-header">小 物<span id="arrow03" style="padding-left:110px" class="glyphicon glyphicon-chevron-right"></span></label>
+<ul id="tree03" class="nav nav-list tree fontSet">
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000163/">カードケース</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000164/">キーケース</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000201/">キーホルダー</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000202/">名刺入れ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000203/">通帳ケース</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000204/">パスポートケース</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000205/">ソックス·靴下</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000206/">帽子</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000207/">フェイスマスク</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000208/">手袋</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000209/">マフラー</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/00000002010/">スカーフ·ストール</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/00000002011/">ベルト</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/00000002012/">インソール</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/00000002013/">その他小物</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li>
+<label id="treeLab04" class="tree-toggler nav-header">アパレル レディース<span id="arrow04" style="padding-left:10px" class="glyphicon glyphicon-chevron-right"></label>
+<ul id="tree04" class="nav nav-list tree fontSet">
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000179/">アウターウェア</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000180/">ブラウス</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000181/">カットソー</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000182/">キャミソール</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000183/">シャツ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000184/">カーディガン</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000185/">ワンピース</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000186/">ベスト</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000187/">ボトムス</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000188/">レギンス·タイツ</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000189/">下着</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000190/">補正下着</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000191/">その他アパレル</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li>
+<label id="treeLab05" class="tree-toggler nav-header">アパレル メンズ<span id="arrow05" style="padding-left:38px" class="glyphicon glyphicon-chevron-right"></label>
+<ul id="tree05" class="nav nav-list tree fontSet">
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000193/">アウターウェア</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000194/">カットソー</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000195/">カーディガン</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000196/">ボトムス</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000197/">ベスト</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000198/">下着</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000199/">補正下着</a></li>
+<li><a target="_top" href="http://item.rakuten.co.jp/cibeles/c/0000000200/">その他アパレル</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div style="background-color: #f5f5f5; margin: -16px 0px 0px; border: 1px solid #cccccc; font-size:24px; font-weight:bold; padding:20px">
+		<div style="text-align:center"><span>ITEM SEARCH</span></div><hr>
+		<div style="margin-top:-15px; margin-left:2px"><span class="fontSet" style="left; font-size:12px; color:red; ">価格（税金込）から選ぶ</span></div>
+		<select id="itemSearch" class="form-control">
+			<option></option>
+			<option>～ 1,999円</option>
+			<option>2,000円～2,999円</option>
+			<option>3,000円～3,999円</option>
+			<option>4,000円～4,999円</option>
+			<option>5,000円～5,999円</option>
+			<option>6,000円～6,999円</option>
+			<option>7,000円～7,999円</option>
+			<option>8,000円～8,999円</option>
+			<option>9,000円～9,999円</option>
+			<option>10,000円～14,999円</option>
+			<option>15,000円～19,999円</option>
+			<option>20,000円～</option>
+		</select>
+</div>
+
+<!--detail side ad pic start-->
+<div style="overflow:hidden">
+	<a href="#"><img style="margin:10px 0 0 0; border:2px solid #ddd;" src="../../images/detail_page/side-01.jpg"></a>
+	<div style="margin:-2px 0px 0;padding:10px 0px 10px 2px;background-color:#DDDEE2; border:2px solid #ddd; font-weight:bold; font-size:18px;">
+	<font style="font-size:12px">¥</font>13,000<font style="font-size:9px">(税別)</font><a href="#"><img src="../../images/detail_page/side-warepagelink.jpg"></a></div>
+	<a href="#"><img style="margin:10px 0 0 0; border:2px solid #ddd;" src="../../images/detail_page/side-02.jpg"></a>
+	<div style="margin:-2px 0px 0;padding:10px 0px 10px 2px;background-color:#DDDEE2; border:2px solid #ddd; font-weight:bold; font-size:18px;">
+	<font style="font-size:12px">¥</font>13,000<font style="font-size:9px">(税別)</font><a href="#"><img src="../../images/detail_page/side-warepagelink.jpg"></a></div>
+</div>
+<!--detail side ad pic end-->
+<div>
+<script type='text/javascript'>
+
+			$(document).ready(function () {
+				$('label.tree-toggler').click(function () {
+					$(this).parent().children('ul.tree').toggle(300, function() {
+						
+						var iframe02 = $(window.parent.document).find("#iframe02");
+						var thisheight = $(document).height();
+
+						iframe02.height(thisheight);
+					});
+				});
+			});
+			
+			$(document).ready(function(){ 
+
+				$('#itemSearch').change(function(){ 
+				var p1=$(this).children('option:selected').val();//这就是selected的值 
+				if (p1 == "～ 1,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=1&max=1999";
+
+				}
+				if (p1 == "2,000円～2,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=2000&max=2999";
+
+				}
+				if (p1 == "3,000円～3,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=3000&max=3999";
+
+				}
+				if (p1 == "4,000円～4,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=4000&max=4999";
+
+				}
+				if (p1 == "5,000円～5,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=2000&max=5999";
+				}
+				if (p1 == "6,000円～6,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=6000&max=6999";
+				}
+				if (p1 == "7,000円～7,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=7000&max=7999";
+				}
+				if (p1 == "8,000円～8,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=8000&max=8999";
+				}
+				if (p1 == "9,000円～9,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=9000&max=9999";
+				}
+				if (p1 == "10,000円～14,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=10000&max=14999";
+				}
+				if (p1 == "15,000円～19,999円") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=15000&max=19999";
+				}
+				if (p1 == "20,000円～") {
+					top.location.href="http://search.rakuten.co.jp/search/inshop-mall?f=1&v=2&sid=299440&uwd=1&s=1&p=1&sitem=&st=A&nitem=&min=20000&max=";
+				}
+				 
+				}) 
+			}) 
+
+			
+				$(window.parent.document).find("#iframe02").load(function(){
+					var iframe02 = $(window.parent.document).find("#iframe02");
+					var thisheight = $(document).height();
+					iframe02.height(thisheight);
+				});
+			
+					
+				$(function() {
+					$("#myCarousel_horizon").css({"z-index":"-1"});
+					$("#tree02").hide();
+					$("#tree03").hide();
+					$("#tree04").hide();
+					$("#tree05").hide();
+
+					$( "#treeLab01" ).click( 
+					function() {
+						$(window.parent.document).find("#iframe02").height($(document).height());
+						$("#tree02").hide();
+						$("#tree03").hide();
+						$("#tree04").hide();
+						$("#tree05").hide(); 
+						$.setArrow("#tree01", "#arrow01");
+					}
+				);
+				
+				$( "#treeLab02" ).click( 
+					function() {
+					$(window.parent.document).find("#iframe02").height($(document).height());
+					$("#tree01").hide();
+					$("#tree03").hide();
+					$("#tree04").hide();
+					$("#tree05").hide();
+					$.setArrow("#tree02", "#arrow02");
+					} 		
+				);
+				
+				$( "#treeLab03" ).click( 
+					function() {
+						$("#tree02").hide();
+						$("#tree01").hide();
+						$("#tree04").hide();
+						$("#tree05").hide();
+						$.setArrow("#tree03", "#arrow03");
+					} 		
+				);
+				
+				$( "#treeLab04" ).click( 
+					function() {
+						$(window.parent.document).find("#iframe02").height($(document).height());
+						$("#tree02").hide();
+						$("#tree03").hide();
+						$("#tree01").hide();
+						$("#tree05").hide();
+						$.setArrow("#tree04", "#arrow04");
+					} 		
+				);
+				
+				$( "#treeLab05" ).click(
+					function() {
+						$(window.parent.document).find("#iframe02").height($(document).height());
+						$("#tree02").hide();
+						$("#tree03").hide();
+						$("#tree01").hide();
+						$("#tree04").hide();
+						$.setArrow("#tree05", "#arrow05");
+					} 		
+				);
+			});
+		
+		
+		$.extend({setArrow:function(treeId, arrowId){
+			
+				if ($(treeId).is(":visible")) {
+						$(arrowId).removeClass("glyphicon glyphicon-chevron-down");
+						$(arrowId).addClass("glyphicon glyphicon-chevron-right");
+				} else {
+						$(arrowId).removeClass("glyphicon glyphicon-chevron-right");
+						$(arrowId).addClass("glyphicon glyphicon-chevron-down");
+				}
+			}});
+
+			<!-- 右边固定元素事件 -->
+		$("#right_fixed1").hover(function() {
+			$("#right_fixed1").animate({right : "0px"}, 400,function(){})
+		}, function() {
+			$("#right_fixed1").animate({right : "-400px"}, 400,function(){})
+		})
+		$("#right_fixed2").hover(function() {
+			$("#right_fixed2").animate({right : "0px"}, 400,function(){})
+		}, function() {
+			$("#right_fixed2").animate({right : "-400px"}, 400,function(){})
+		})
+		$("#right_fixed3").hover(function() {
+			$("#right_fixed3").animate({right : "0px"}, 400,function(){})
+		}, function() {
+			$("#right_fixed3").animate({right : "-400px"}, 400,function(){})
+		})
+
+</script>
+</body>
+</html>

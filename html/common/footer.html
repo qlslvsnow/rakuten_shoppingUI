@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楽天 luckSeven</title>
+
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<link href="../../css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<link href="../../css/my.css" rel="stylesheet">
+<script src="../../js/jquery-1.11.2.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/bootstrap-hover-dropdown.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/datepicker-ja.js"></script>
+<script src="../../js/gcalendar-holidays.js"></script>
+
+<style type="text/css">
+body {
+	padding: 0 1em
+}
+h2 {
+	margin-bottom: 0
+}
+pre {
+	padding: 1em;
+	background-color: #ccc
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align: center
+}
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+	width: auto
+}
+.ui-datepicker select.ui-datepicker-month {
+	margin-left: 1em
+}
+
+.gcal-sunday .ui-state-default {
+	background-image: none;
+	background-color: #f99
+}
+.gcal-saturday .ui-state-default {
+	background-image: none;
+	background-color: #6cf
+}
+.ui-widget-content .gcal-holiday {
+	background-image: none;
+	background-color: #f9f
+}
+.nav-list .divider {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+iframe {
+	z-index:100;
+}
+#myCarousel_horizon {
+	z-index: 1;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<!--foot s-->
+<footer class="panel-footer" style="text-align:center; margin:20px;"> <img src="../../images/footerImg/foot-ttl.png">
+  <div id="company">
+    <div class="left">
+      <dl>
+        <!-- <dt><a id="payfor" href="../guide/luckSeven_userguide4.html" target="_top">お支払について</a></dt> -->
+		<dt><a id="payfor" href="../guide/luckSeven_userguide4.html">お支払について</a></dt>
+        <dd>お支払いは　<a href="../guide/luckSeven_userguide4.html#02">クレジットカード決済</a>・<a href="../guide/luckSeven_userguide4.html#06">楽天Edy決済</a>・<a href="../guide/luckSeven_userguide4.html#04">セブンイレブン決済</a>・<a href="../guide/luckSeven_userguide4.html#05">ローソン決済・代金引換</a>・NP後払いよりお選びいただけます。<br>
+        </dd>
+        <dt><a href="../guide/luckSeven_userguide5.html">配送料について</a></dt>
+        <dd>【業者】佐川急便 </dd>
+        <dd>【送料】送料は、全国600円（税込）です。※沖縄県の場合は1,200円（税込）となります</dd>
+        <dd>【代引手数料】一律324円 </dd>
+        <dd>※１配送先につき、合計8,000円以上ご注文頂いた場合送料が0円になります。</dd>
+        <hr>
+        <dt><a href="../guide/luckSeven_userguide7.html">交換・返品について</a></dt>
+        <dd>お客様都合によるサイズ交換や返品につきましては、当店の定める条件を満たす場合のみお受けしております。<br>
+          ご希望の方は必ず、注意点をご確認いただき、商品お受け取り後 １週間以内に当店までご連絡くださいませ。</dd>
+      </dl>
+    </div>
+    <div class="right">
+      <dl>
+        <dt><a href="../guide/luckSeven_userguide11.html">お問い合せ</a></dt>
+        <dd>【楽天市場】株式会社ＣＩＢＥＬＥＳ</dd>
+        <dd>時間 / 10：00 ～ 18：00 （月～金） </dd>
+        <dd>休業日 / 土曜日 日曜日 ・祝日</dd>
+        <dd>住所：〒350-1145 埼玉県川越市 清水町16-1-201号</dd>
+        <dd>TEL：04-9293-9558</dd>
+        <dd>MAIL:cibeles@shop.rakuten.co.jp</dd>
+        <dd>
+          <div style="padding-top:4px;" id="datepicker"></div>
+          <div style="padding-top:2px"> <span style="color:#faadad; font-size:16px">■</span><span style="font-size: 9px; ">は休業日（土･日･祝日休）<br>
+            ※休業日のご注文は翌営業日より発送</span> </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</footer>
+<!--foot e--> 
+</div>
+<script type='text/javascript'>
+	$(function() {
+
+		$( "#datepicker" ).datepicker( { 
+			changeYear: true, 
+			changeMonth: true
+			,beforeShow : {
+			},                		
+		});
+		//var ret = redirect();
+		$('a').attr('target', '_top');
+		//$('#payfor').attr('href', ret + '/guide/luckSeven_userguide4.html'); 
+		//alert(11);
+	});
+	
+	//function redirect() 
+	//{ 
+	//	var currentPath = location.href.substring(0,location.href.lastIndexOf('/'));
+	//	var jqcurrenPath = currentPath.substring(0, currentPath.lastIndexOf('/'));
+	//	return jqcurrenPath;
+	//}
+	
+</script>
+</body>
+</html>
